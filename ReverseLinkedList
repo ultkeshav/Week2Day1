@@ -1,0 +1,21 @@
+class Solution {
+  public:
+    Node* reverseList(Node* head) {
+
+       Node* current  = head;
+       Node* currentNext = NULL;
+       Node* prev = NULL;
+       
+       
+       while(current!=NULL){
+           
+           currentNext = current->next;
+           current->next = prev;
+           prev = current;
+           current = currentNext;
+       }
+        
+        
+        return prev;
+    }
+};
